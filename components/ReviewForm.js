@@ -1,7 +1,7 @@
 app.component('review-form', {
     template:
     /*html*/
-        `<form class="review-form">
+        `<form class="review-form" @submit.prevent="onSubmit">
             <h3> Leave a review </h3>
             <label for="name"> Name: </label>
             <input id="name" v-model="name"> 
@@ -25,6 +25,19 @@ app.component('review-form', {
             review: '',
             rating: null
 
+        }
+    },
+    methods: {
+        onSubmit() {
+            let productReview = {
+                name: this.name,
+                review: this.review,
+                rating: this.rating,
+            }
+            this.$emit('review-submitted', productReview)
+            this.name = ''
+            this.review = ''
+            this.rating = null
         }
     }
 
