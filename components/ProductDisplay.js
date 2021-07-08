@@ -3,6 +3,10 @@ app.component('product-display', {
         premium: {
             type: Boolean,
             required: true
+        },
+        detail: {
+            type: String,
+            required: true
         }
     },
 
@@ -35,6 +39,11 @@ app.component('product-display', {
                     Add to Cart
                 </button>
             </div>
+            
+            <div class="product-details">
+            <p>Product Detail: {{detail}}</p>
+            </div>
+
         </div>
     </div>`,
     data() {
@@ -94,6 +103,5 @@ app.component('product-display', {
             }
             return 30
         }
-
     }
 })
