@@ -18,7 +18,8 @@
 
         <div class="product-display">
             <div class="product-container">
-                <div class="product-image">
+                <!-- 2.6 -->
+                <div class="product-image" :class="{outOfStockImg: !inStock}">
                     <img :src="image">
                 </div>
                 <div class="product-info">

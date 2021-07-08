@@ -85,7 +85,13 @@ li {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
 }
 
-.out-of-stock-img {
+
+/* 2.6 */
+
+
+/* .out-of-stock-img { */
+
+.outOfStockImg {
     opacity: 0.5
 }
 
