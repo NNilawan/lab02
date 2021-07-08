@@ -40,9 +40,7 @@ app.component('product-display', {
                 </button>
             </div>
             
-            <div class="product-details">
-            <p>Product Detail: {{detail}}</p>
-            </div>
+           
 
         </div>
     </div>`,
