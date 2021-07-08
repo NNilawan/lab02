@@ -18,7 +18,7 @@ app.component('product-display', {
                
                 <p v-if="inStock">In Stock</p>
                 <p v-else>Out of Stock</p>
-
+                <p>Shipping: {{shipping}}</p>
                 <div 
                     v-for="(variant,index) in variants" 
                     :key="variant.id" 
@@ -87,6 +87,12 @@ app.component('product-display', {
             } else {
                 return ''
             }
+        },
+        shipping() {
+            if (this.premium) {
+                return 'Free'
+            }
+            return 30
         }
 
     }
