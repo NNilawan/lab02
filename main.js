@@ -31,21 +31,25 @@ const app = Vue.createApp({
     },
     computed: {
         title() {
-            if (this.onSale) {
-                return this.brand + ' ' + this.product + ' is on sale'
-            } else {
-                return this.brand + ' ' + this.product
-            }
-
-            // title = this.brand + ' ' + this.product
-            // if (this.onSale) a += ' is on sale'
-            // return title
+            return this.brand + ' ' + this.product
+                // title = this.brand + ' ' + this.product
+                // if (this.onSale) a += ' is on sale'
+                // return title
         },
         image() {
             return this.variants[this.selectedVariant].image;
         },
         inStock() {
             return this.variants[this.selectedVariant].quantity;
+        },
+        //  option 2
+        onSaleTiltle() {
+            if (this.onSale) {
+                return this.brand + ' ' + this.product + ' is on sale'
+            } else {
+                return ''
+            }
         }
+
     }
 })
