@@ -10,6 +10,10 @@ const app = Vue.createApp({
     methods: {
         updateCart(id) {
             this.cart.push(id);
+        },
+        updateRemoveCart(id) {
+            index = this.cart.indexOf(id);
+            this.cart.splice(index, 1);
         }
     }
 
